@@ -1,0 +1,2218 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tamil Trader Harmonic Raj | Trading Education</title>
+
+<meta name="description"
+content="Tamil Trader Harmonic Raj - Trading education, harmonic trading concepts, market learning and structured educational resources.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Inter",sans-serif;
+    background:#050816;
+    color:#f5f7ff;
+    overflow-x:hidden;
+}
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    top:-220px;
+    left:-180px;
+    background:#6c63ff;
+    filter:blur(180px);
+    opacity:.16;
+    z-index:-2;
+    pointer-events:none;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    right:-220px;
+    bottom:-220px;
+    background:#00d9a5;
+    filter:blur(180px);
+    opacity:.10;
+    z-index:-2;
+    pointer-events:none;
+}
+
+.container{
+    width:min(1100px,92%);
+    margin:auto;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    padding:18px 0;
+
+    background:rgba(5,8,22,.72);
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.nav-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-family:"Space Grotesk",sans-serif;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:-.5px;
+}
+
+.logo span{
+    color:#42e8c1;
+}
+
+.nav-button{
+    text-decoration:none;
+    color:#fff;
+
+    padding:10px 17px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+
+    font-size:13px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.nav-button:hover{
+    background:rgba(255,255,255,.11);
+    transform:translateY(-2px);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    padding:100px 0 80px;
+    text-align:center;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+
+    padding:9px 15px;
+
+    border-radius:50px;
+
+    background:rgba(124,114,255,.10);
+    border:1px solid rgba(124,114,255,.25);
+
+    color:#aaa5ff;
+
+    font-size:12px;
+    font-weight:700;
+
+    animation:fadeDown .8s ease;
+}
+
+.badge-dot{
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:#42e8c1;
+
+    box-shadow:0 0 15px #42e8c1;
+}
+
+.hero h1{
+    max-width:900px;
+
+    margin:25px auto 0;
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:clamp(43px,7vw,78px);
+
+    line-height:1.02;
+
+    letter-spacing:-3px;
+
+    animation:fadeUp .9s ease;
+}
+
+.gradient{
+    background:linear-gradient(
+        90deg,
+        #8b82ff,
+        #42e8c1
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+.hero-description{
+    max-width:650px;
+
+    margin:25px auto 0;
+
+    color:#9da4b9;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    animation:fadeUp 1s ease;
+}
+
+.hero-buttons{
+    display:flex;
+
+    justify-content:center;
+
+    gap:13px;
+
+    margin-top:32px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:8px;
+
+    text-decoration:none;
+
+    padding:15px 23px;
+
+    border-radius:14px;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    transition:.3s;
+}
+
+.btn-primary{
+    color:#04110d;
+
+    background:#42e8c1;
+
+    box-shadow:
+        0 10px 35px rgba(66,232,193,.16);
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 15px 45px rgba(66,232,193,.25);
+}
+
+.btn-secondary{
+    color:#fff;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.btn-secondary:hover{
+    background:rgba(255,255,255,.1);
+
+    transform:translateY(-3px);
+}
+
+/* =========================================================
+   TRADING DASHBOARD
+========================================================= */
+
+.dashboard{
+    max-width:900px;
+
+    margin:60px auto 0;
+
+    padding:10px;
+
+    border-radius:26px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.14),
+            rgba(255,255,255,.025)
+        );
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 35px 100px rgba(0,0,0,.4);
+
+    animation:
+        dashboardFloat 5s ease-in-out infinite;
+}
+
+.dashboard-inner{
+    padding:25px;
+
+    border-radius:18px;
+
+    background:#080d20;
+
+    border:1px solid rgba(255,255,255,.04);
+}
+
+.dashboard-top{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+}
+
+.market-info{
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+}
+
+.market-icon{
+    width:42px;
+    height:42px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:13px;
+
+    color:#9a92ff;
+
+    background:rgba(124,114,255,.13);
+
+    border:1px solid rgba(124,114,255,.15);
+}
+
+.market-name{
+    font-size:14px;
+    font-weight:700;
+}
+
+.market-sub{
+    margin-top:4px;
+
+    color:#737b92;
+
+    font-size:11px;
+}
+
+.live-badge{
+    padding:7px 12px;
+
+    border-radius:20px;
+
+    color:#42e8c1;
+
+    background:rgba(66,232,193,.07);
+
+    border:1px solid rgba(66,232,193,.15);
+
+    font-size:10px;
+
+    font-weight:800;
+}
+
+.chart{
+    height:250px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        );
+
+    background-size:50px 50px;
+}
+
+.chart-title{
+    position:absolute;
+
+    top:15px;
+    left:15px;
+
+    color:#646d85;
+
+    font-size:10px;
+
+    letter-spacing:1px;
+
+    z-index:2;
+}
+
+.chart svg{
+    width:100%;
+    height:100%;
+}
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+section{
+    padding:85px 0;
+}
+
+.section-heading{
+    text-align:center;
+
+    margin-bottom:45px;
+}
+
+.section-label{
+    color:#42e8c1;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    font-weight:800;
+}
+
+.section-heading h2{
+    margin-top:10px;
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:clamp(31px,5vw,46px);
+
+    letter-spacing:-1px;
+}
+
+.section-heading p{
+    max-width:620px;
+
+    margin:13px auto 0;
+
+    color:#858ca2;
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+/* =========================================================
+   EDUCATION CARDS
+========================================================= */
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+}
+
+.card{
+    position:relative;
+
+    padding:28px;
+
+    border-radius:21px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.065),
+            rgba(255,255,255,.025)
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:
+        transform .35s,
+        border-color .35s,
+        box-shadow .35s;
+
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    right:-60px;
+    top:-60px;
+
+    border-radius:50%;
+
+    background:#7c72ff;
+
+    filter:blur(60px);
+
+    opacity:.08;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    border-color:
+        rgba(124,114,255,.4);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25);
+}
+
+.icon{
+    width:50px;
+    height:50px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:15px;
+
+    color:#958cff;
+
+    background:rgba(124,114,255,.11);
+
+    border:1px solid rgba(124,114,255,.15);
+
+    font-size:20px;
+
+    margin-bottom:22px;
+}
+
+.card h3{
+    font-size:18px;
+
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#858ca2;
+
+    font-size:14px;
+
+    line-height:1.7;
+}
+
+/* =========================================================
+   ROADMAP
+========================================================= */
+
+.roadmap{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:14px;
+}
+
+.step{
+    padding:25px;
+
+    border-radius:19px;
+
+    background:#080d20;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    transition:.3s;
+}
+
+.step:hover{
+    transform:translateY(-5px);
+
+    border-color:
+        rgba(66,232,193,.25);
+}
+
+.step-number{
+    color:#42e8c1;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    margin-bottom:20px;
+}
+
+.step h3{
+    font-size:16px;
+
+    margin-bottom:10px;
+}
+
+.step p{
+    color:#7e869b;
+
+    font-size:13px;
+
+    line-height:1.65;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:30px;
+
+    align-items:center;
+}
+
+.about-box{
+    padding:38px;
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(124,114,255,.12),
+            rgba(255,255,255,.025)
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.profile{
+    width:85px;
+    height:85px;
+
+    display:grid;
+    place-items:center;
+
+    margin-bottom:24px;
+
+    border-radius:23px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8177ff,
+            #42e8c1
+        );
+
+    color:#050816;
+
+    font-family:"Space Grotesk";
+
+    font-size:26px;
+
+    font-weight:800;
+
+    box-shadow:
+        0 15px 35px rgba(66,232,193,.10);
+}
+
+.about h2{
+    font-family:"Space Grotesk";
+
+    font-size:38px;
+
+    margin-bottom:15px;
+}
+
+.about p{
+    color:#9299ad;
+
+    line-height:1.8;
+
+    font-size:14px;
+}
+
+.points{
+    display:grid;
+
+    gap:12px;
+
+    margin-top:24px;
+}
+
+.point{
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    color:#cdd1dc;
+
+    font-size:13px;
+}
+
+.check{
+    width:22px;
+    height:22px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:50%;
+
+    color:#42e8c1;
+
+    background:rgba(66,232,193,.1);
+
+    font-size:11px;
+}
+
+/* =========================================================
+   COURSE
+========================================================= */
+
+.course{
+    display:grid;
+
+    grid-template-columns:
+        1.3fr .7fr;
+
+    gap:30px;
+
+    align-items:center;
+
+    padding:42px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111738,
+            #080d20
+        );
+
+    border:1px solid rgba(124,114,255,.2);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.25);
+}
+
+.course-label{
+    color:#42e8c1;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+}
+
+.course h2{
+    font-family:"Space Grotesk";
+
+    font-size:38px;
+
+    line-height:1.1;
+
+    margin:12px 0;
+}
+
+.course-description{
+    color:#8c93a8;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    max-width:620px;
+}
+
+.course-list{
+    display:grid;
+
+    gap:11px;
+
+    margin-top:22px;
+}
+
+.course-list div{
+    color:#c7cad4;
+
+    font-size:13px;
+}
+
+.course-box{
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.course-box small{
+    display:block;
+
+    color:#7d8499;
+
+    font-size:11px;
+
+    margin-bottom:10px;
+}
+
+.course-box strong{
+    display:block;
+
+    font-family:"Space Grotesk";
+
+    font-size:23px;
+
+    margin-bottom:20px;
+}
+
+/* =========================================================
+   FREE EDUCATION
+========================================================= */
+
+.free-box{
+    text-align:center;
+
+    padding:45px 25px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(66,232,193,.08),
+            rgba(124,114,255,.08)
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.free-icon{
+    width:58px;
+    height:58px;
+
+    display:grid;
+    place-items:center;
+
+    margin:0 auto 20px;
+
+    border-radius:18px;
+
+    background:rgba(66,232,193,.1);
+
+    color:#42e8c1;
+
+    font-size:24px;
+}
+
+.free-box h2{
+    font-family:"Space Grotesk";
+
+    font-size:35px;
+}
+
+.free-box p{
+    max-width:600px;
+
+    margin:13px auto 25px;
+
+    color:#858ca2;
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+/* =========================================================
+   DISCLAIMER
+========================================================= */
+
+.disclaimer{
+    margin-top:25px;
+
+    padding:20px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.025);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    color:#777f94;
+
+    font-size:11px;
+
+    line-height:1.8;
+
+    text-align:center;
+}
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta{
+    text-align:center;
+
+    padding:100px 20px;
+}
+
+.final-cta h2{
+    font-family:"Space Grotesk";
+
+    font-size:clamp(34px,5vw,55px);
+
+    letter-spacing:-1px;
+}
+
+.final-cta p{
+    max-width:570px;
+
+    margin:15px auto 28px;
+
+    color:#858ca2;
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    padding:35px 0 115px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.07);
+
+    color:#626a80;
+
+    font-size:11px;
+
+    line-height:1.8;
+}
+
+.footer-name{
+    color:#b4b9c8;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+}
+
+/* =========================================================
+   STICKY TELEGRAM BUTTON
+========================================================= */
+
+.sticky-telegram{
+    position:fixed;
+
+    left:50%;
+    bottom:18px;
+
+    transform:translateX(-50%);
+
+    width:min(390px,90%);
+
+    z-index:2000;
+}
+
+.sticky-telegram a{
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:10px;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    text-decoration:none;
+
+    color:#04110d;
+
+    background:#42e8c1;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.45);
+
+    transition:.3s;
+}
+
+.sticky-telegram a:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes dashboardFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-7px);
+    }
+
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:850px){
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .roadmap{
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .course{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:550px){
+
+    .container{
+        width:90%;
+    }
+
+    .navbar{
+        padding:15px 0;
+    }
+
+    .logo{
+        font-size:15px;
+    }
+
+    .nav-button{
+        padding:9px 12px;
+
+        font-size:11px;
+    }
+
+    .hero{
+        padding:70px 0 55px;
+    }
+
+    .hero h1{
+        font-size:43px;
+
+        letter-spacing:-2px;
+    }
+
+    .hero-description{
+        font-size:13px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+    .dashboard{
+        margin-top:45px;
+
+        padding:7px;
+
+        border-radius:20px;
+    }
+
+    .dashboard-inner{
+        padding:14px;
+
+        border-radius:15px;
+    }
+
+    .dashboard-top{
+        margin-bottom:15px;
+    }
+
+    .chart{
+        height:180px;
+    }
+
+    section{
+        padding:65px 0;
+    }
+
+    .section-heading{
+        margin-bottom:32px;
+    }
+
+    .section-heading h2{
+        font-size:31px;
+    }
+
+    .about-box{
+        padding:27px;
+    }
+
+    .about h2{
+        font-size:31px;
+    }
+
+    .course{
+        padding:27px;
+    }
+
+    .course h2{
+        font-size:31px;
+    }
+
+    .course-box{
+        padding:25px;
+    }
+
+    .free-box{
+        padding:35px 20px;
+    }
+
+    .free-box h2{
+        font-size:30px;
+    }
+
+}
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+        scroll-behavior:auto !important;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     NAVBAR
+======================================================== -->
+
+<nav class="navbar">
+
+    <div class="container nav-inner">
+
+        <div class="logo">
+            Tamil Trader <span>Harmonic Raj</span>
+        </div>
+
+        <a href="#course" class="nav-button">
+            View Course
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =======================================================
+     HERO
+======================================================== -->
+
+<header class="hero">
+
+    <div class="container">
+
+        <div class="badge">
+
+            <span class="badge-dot"></span>
+
+            Trading Education & Learning
+
+        </div>
+
+
+        <h1>
+
+            Learn Trading With
+
+            <span class="gradient">
+                Clarity & Structure
+            </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            I'm Tamil Trader Harmonic Raj. I share trading
+            knowledge, harmonic trading concepts, market
+            learning resources and practical educational
+            guidance for traders.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <!-- REPLACE WITH YOUR TELEGRAM LINK -->
+
+            <a
+                href="YOUR_TELEGRAM_LINK"
+                class="btn btn-primary"
+                target="_blank"
+            >
+
+                ✈️ Join Free Updates
+
+            </a>
+
+
+            <a
+                href="#learning"
+                class="btn btn-secondary"
+            >
+
+                Explore Learning ↓
+
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             TRADING DASHBOARD
+        ================================================== -->
+
+        <div class="dashboard">
+
+            <div class="dashboard-inner">
+
+
+                <div class="dashboard-top">
+
+                    <div class="market-info">
+
+                        <div class="market-icon">
+                            ◈
+                        </div>
+
+                        <div>
+
+                            <div class="market-name">
+                                Market Learning
+                            </div>
+
+                            <div class="market-sub">
+                                Technical Analysis
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="live-badge">
+                        ● EDUCATION
+                    </div>
+
+                </div>
+
+
+                <div class="chart">
+
+                    <div class="chart-title">
+                        MARKET STRUCTURE
+                    </div>
+
+
+                    <svg
+                        viewBox="0 0 900 250"
+                        preserveAspectRatio="none"
+                    >
+
+                        <defs>
+
+                            <linearGradient
+                                id="lineGradient"
+                                x1="0%"
+                                y1="0%"
+                                x2="100%"
+                                y2="0%"
+                            >
+
+                                <stop
+                                    offset="0%"
+                                    stop-color="#8177ff"
+                                />
+
+                                <stop
+                                    offset="100%"
+                                    stop-color="#42e8c1"
+                                />
+
+                            </linearGradient>
+
+                        </defs>
+
+
+                        <polyline
+
+                            points="
+                            0,205
+                            70,185
+                            125,195
+                            185,145
+                            250,165
+                            310,105
+                            375,130
+                            440,75
+                            500,105
+                            560,62
+                            625,90
+                            690,50
+                            755,72
+                            820,35
+                            900,18
+                            "
+
+                            fill="none"
+
+                            stroke="url(#lineGradient)"
+
+                            stroke-width="4"
+
+                            stroke-linecap="round"
+
+                            stroke-linejoin="round"
+
+                        />
+
+
+                        <polyline
+
+                            points="
+                            0,215
+                            70,195
+                            125,205
+                            185,155
+                            250,175
+                            310,115
+                            375,140
+                            440,85
+                            500,115
+                            560,72
+                            625,100
+                            690,60
+                            755,82
+                            820,45
+                            900,28
+                            "
+
+                            fill="none"
+
+                            stroke="rgba(66,232,193,.08)"
+
+                            stroke-width="16"
+
+                            stroke-linecap="round"
+
+                        />
+
+                    </svg>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =======================================================
+     TRADING EDUCATION
+======================================================== -->
+
+<section id="learning">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                WHAT YOU CAN LEARN
+            </div>
+
+            <h2>
+                Trading Knowledge,
+                Simplified.
+            </h2>
+
+            <p>
+
+                Learn important concepts step by step
+                and develop a stronger understanding
+                of the markets.
+
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="icon">
+                    ◈
+                </div>
+
+                <h3>
+                    Market Structure
+                </h3>
+
+                <p>
+
+                    Understand trends, market structure,
+                    support and resistance and how traders
+                    study price movement.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    ⌁
+                </div>
+
+                <h3>
+                    Harmonic Trading
+                </h3>
+
+                <p>
+
+                    Explore harmonic pattern concepts,
+                    chart formations and how these ideas
+                    are studied in technical analysis.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    ◫
+                </div>
+
+                <h3>
+                    Risk Awareness
+                </h3>
+
+                <p>
+
+                    Learn about position sizing,
+                    risk management and the importance
+                    of disciplined trading decisions.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     HARMONIC SECTION
+======================================================== -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                HARMONIC TRADING
+            </div>
+
+            <h2>
+                Understand The Patterns
+            </h2>
+
+            <p>
+
+                Study harmonic concepts using structured
+                learning and chart-based examples.
+
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="icon">
+                    H
+                </div>
+
+                <h3>
+                    Pattern Recognition
+                </h3>
+
+                <p>
+
+                    Learn how traders identify potential
+                    harmonic formations on price charts.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    X
+                </div>
+
+                <h3>
+                    Fibonacci Concepts
+                </h3>
+
+                <p>
+
+                    Understand the role of Fibonacci
+                    relationships in harmonic analysis.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    ↗
+                </div>
+
+                <h3>
+                    Chart Practice
+                </h3>
+
+                <p>
+
+                    Study historical charts and practice
+                    identifying structures and patterns.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     4 STEP ROADMAP
+======================================================== -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                LEARNING ROADMAP
+            </div>
+
+            <h2>
+                Start With The Basics
+            </h2>
+
+            <p>
+
+                A simple four-step framework for
+                building your trading knowledge.
+
+            </p>
+
+        </div>
+
+
+        <div class="roadmap">
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    STEP 01
+                </div>
+
+                <h3>
+                    Market Basics
+                </h3>
+
+                <p>
+
+                    Understand charts, terminology,
+                    instruments and basic market behaviour.
+
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    STEP 02
+                </div>
+
+                <h3>
+                    Price Action
+                </h3>
+
+                <p>
+
+                    Study trends, levels and important
+                    areas of price movement.
+
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    STEP 03
+                </div>
+
+                <h3>
+                    Harmonic Patterns
+                </h3>
+
+                <p>
+
+                    Learn the concepts behind harmonic
+                    formations and Fibonacci relationships.
+
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    STEP 04
+                </div>
+
+                <h3>
+                    Practice & Review
+                </h3>
+
+                <p>
+
+                    Practice with charts and review
+                    your learning process regularly.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     ABOUT HARMONIC RAJ
+======================================================== -->
+
+<section>
+
+    <div class="container about">
+
+
+        <div class="about-box">
+
+            <div class="profile">
+                HR
+            </div>
+
+
+            <h2>
+                I'm Harmonic Raj.
+            </h2>
+
+
+            <p>
+
+                I create trading education content
+                for people who want to understand
+                market concepts in a simple and
+                structured way.
+
+                <br><br>
+
+                My focus is on education, chart study,
+                harmonic trading concepts and developing
+                better market awareness.
+
+            </p>
+
+
+            <div class="points">
+
+
+                <div class="point">
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    Trading education
+
+                </div>
+
+
+                <div class="point">
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    Harmonic trading concepts
+
+                </div>
+
+
+                <div class="point">
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    Chart-based learning
+
+                </div>
+
+
+                <div class="point">
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    Free educational resources
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+
+            <div
+                class="section-heading"
+                style="text-align:left;margin-bottom:20px;"
+            >
+
+                <div class="section-label">
+                    MY APPROACH
+                </div>
+
+                <h2>
+                    Learn Before You Trade.
+                </h2>
+
+                <p style="margin-left:0;">
+
+                    Good trading education starts with
+                    understanding the market and developing
+                    a disciplined learning process.
+
+                </p>
+
+            </div>
+
+
+            <p
+                style="
+                color:#858ca2;
+                line-height:1.9;
+                font-size:14px;
+                "
+            >
+
+                The goal is not to promise results.
+                The goal is to help you understand
+                concepts, study charts and develop
+                your own approach through learning
+                and practice.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     COURSE
+======================================================== -->
+
+<section id="course">
+
+    <div class="container">
+
+
+        <div class="course">
+
+
+            <div>
+
+                <div class="course-label">
+                    TRADING LEARNING COURSE
+                </div>
+
+
+                <h2>
+                    Build Your Trading Foundation
+                </h2>
+
+
+                <p class="course-description">
+
+                    A structured educational course
+                    covering important trading concepts,
+                    technical analysis and harmonic
+                    trading education.
+
+                </p>
+
+
+                <div class="course-list">
+
+                    <div>
+                        ✓ Market structure
+                    </div>
+
+                    <div>
+                        ✓ Technical analysis concepts
+                    </div>
+
+                    <div>
+                        ✓ Harmonic pattern education
+                    </div>
+
+                    <div>
+                        ✓ Fibonacci concepts
+                    </div>
+
+                    <div>
+                        ✓ Risk management basics
+                    </div>
+
+                    <div>
+                        ✓ Practical chart examples
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="course-box">
+
+                <small>
+                    COURSE INFORMATION
+                </small>
+
+
+                <strong>
+                    Learn At Your Pace
+                </strong>
+
+
+                <!-- REPLACE TELEGRAM LINK -->
+
+                <a
+                    href="YOUR_TELEGRAM_LINK"
+                    target="_blank"
+                    class="btn btn-primary"
+                    style="width:100%;"
+                >
+
+                    Get Course Details →
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="disclaimer">
+
+            <strong>Educational Disclaimer:</strong>
+
+            The information provided on this website
+            is for educational and informational purposes
+            only. It does not constitute financial,
+            investment or trading advice.
+
+            <br>
+
+            Trading and investing involve risk.
+            Past performance does not guarantee future
+            results. Always conduct your own research
+            and consider your individual circumstances
+            before making financial decisions.
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     FREE ADVICE / EDUCATION
+======================================================== -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="free-box">
+
+
+            <div class="free-icon">
+                ✦
+            </div>
+
+
+            <h2>
+                Free Trading Education
+            </h2>
+
+
+            <p>
+
+                Get educational updates, market concepts,
+                chart-learning resources and general
+                trading knowledge.
+
+            </p>
+
+
+            <!-- REPLACE TELEGRAM LINK -->
+
+            <a
+                href="YOUR_TELEGRAM_LINK"
+                target="_blank"
+                class="btn btn-primary"
+            >
+
+                ✈️ Join Free Updates
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     FINAL CTA
+======================================================== -->
+
+<section class="final-cta">
+
+    <div class="container">
+
+
+        <h2>
+
+            Learn.
+            Practice.
+            <span class="gradient">
+                Improve.
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            Start exploring trading education,
+            harmonic concepts and structured
+            market-learning resources.
+
+        </p>
+
+
+        <!-- REPLACE TELEGRAM LINK -->
+
+        <a
+            href="YOUR_TELEGRAM_LINK"
+            target="_blank"
+            class="btn btn-primary"
+        >
+
+            ✈️ Join Tamil Trader Community →
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     FOOTER
+======================================================== -->
+
+<footer>
+
+    <div class="container">
+
+
+        <div class="footer-name">
+            Tamil Trader Harmonic Raj
+        </div>
+
+
+        <div>
+            Trading Education • Harmonic Trading • Market Learning
+        </div>
+
+
+        <div style="margin-top:12px;">
+
+            © 2026 Tamil Trader Harmonic Raj.
+            All rights reserved.
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+<!-- =======================================================
+     STICKY TELEGRAM CTA
+======================================================== -->
+
+<div class="sticky-telegram">
+
+
+    <!-- REPLACE TELEGRAM LINK -->
+
+    <a
+        href="YOUR_TELEGRAM_LINK"
+        target="_blank"
+    >
+
+        ✈️
+
+        Join Free Educational Updates
+
+    </a>
+
+
+</div>
+
+
+</body>
+</html>
+```
